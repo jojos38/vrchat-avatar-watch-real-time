@@ -50,7 +50,7 @@ Once npm install has finished, type `node index.js` in the command line to run t
 Note: You will need to run the program every time you run VRChat or you will need to run it on a server. I run mine on a server I have at home and I use the argument `--osc=9000:192.168.1.22:9001` in order to tell VRChat to send OSC data to my server
 
 ## Step 7: Reset and enable OSC on your avatar
-**Important**: first go to `C:\Users\???\AppData\LocalLow\VRChat\VRChat\OSC\usr_???\Avatars` and delete the `avtr_???.json`` corresponding to your avatar. This is the previous OSC config of your avatar\
+**Important**: first go to `C:\Users\???\AppData\LocalLow\VRChat\VRChat\OSC\usr_???\Avatars` and delete the `avtr_???.json` corresponding to your avatar. This is the previous OSC config of your avatar\
 I think using the `Reset OSC` button in the game does the same, I'm not sure though.
 
 Your avatar minutes and hours may not update yet, the last thing to do is to go the menu on your hand and enable OSC in the options. As soon as OSC is enabled, the Node.js program should react and send the data to your avatar
