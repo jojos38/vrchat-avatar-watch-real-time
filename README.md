@@ -9,7 +9,7 @@ Thanks to Neitri for parts of the shader
 
 ## Step 1: Prepare the 3d model
 The first step is to find a watch 3d model and to put it on your avatar with the right digits polygons for the shader to work.
-The provided Garmin.blend file contains an example. I recommend you copy those to any model you want because the UV map is already set properly
+The provided Garmin.blend file contains an example. I recommend you copy those to any model you want because the UV map and vertex colors are already set properly.\
 Your watch should end up with one (or more) material for the watch itself and one material with the digits polygons only, just like in the example.
 
 ![Vertex color scheme](https://i.ibb.co/BwgD3N3/tmp.png)
@@ -17,7 +17,7 @@ Your watch should end up with one (or more) material for the watch itself and on
 Note: you can discard whatever digit polygon you want, the shader will still work
 
 ## Step 2: Import the shader
-Once you have your 3d model with the hours / minutes / seconds etc. polygons, copy `Watch.shader` and `WatchNumbers.png` to your Unity project and create a new material that uses that shader. Set `_MainTex` to `WatchNumbers.png` and set the color and brightness that you want. Then put it on the digits polygons of the watch.
+Once you have your 3d model with the hours / minutes / seconds etc. polygons, copy `Watch.shader` and `WatchNumbers.png` to your Unity project and create a new material that uses that shader. Set `_MainTex` to `WatchNumbers.png` and set the color and brightness that you want. Then put it on the digits polygons material of the watch.
 
 ## Step 3: Create the animations and animations layers
 You will need two animations. One for the hours and one for the minutes.\
@@ -47,7 +47,10 @@ Once npm install has finished, type `node index.js` in the command line to run t
 
 Note: You will need to run the program every time you run VRChat or you will need to run it on a server. I run mine on a server I have at home and I use the argument `--osc=9000:192.168.1.22:9001` in order to tell VRChat to send OSC data to my server
 
-## Step 7: Enable OSC on your avatar
+## Step 7: Reset and enable OSC on your avatar
+**Important**: first go to `C:\Users\???\AppData\LocalLow\VRChat\VRChat\OSC\usr_???\Avatars` and delete the `avtr_???.json`` corresponding to your avatar. This is the previous OSC config of your avatar\
+I think using the `Reset OSC` button in the game does the same, I'm not sure though.
+
 Your avatar minutes and hours may not update yet, the last thing to do is to go the menu on your hand and enable OSC in the options. As soon as OSC is enabled, the Node.js program should react and send the data to your avatar
 
 Enjoy!
