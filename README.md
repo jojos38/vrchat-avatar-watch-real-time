@@ -6,6 +6,8 @@ Thanks to Neitri for parts of the shader
 
 * Difficulty: 4/5 (Advanced users / Very advanced users)
 * Time: About 4 hours
+* Platform: PC only
+* Known issues: Seconds will not be in sync with minutes because they are not synchronized using OSC
 
 ## Step 1: Prepare the 3d model
 The first step is to find a watch 3d model and to put it on your avatar with the right digits polygons for the shader to work.
@@ -41,9 +43,9 @@ Simply follow exactly what's on the photo and repeat the exact same step for the
 
 ## Step 6: Run the node.js OSC program
 Upload and test your avatar in VRChat, the watch seconds should go through but not the minutes and hours, this is normal. Your watch is not receiving OSC data yet.\
-First step, install the latest Node.js from the official website https://nodejs.org/en/download/
-Then, go to the `OSC program` folder and open a command line there. Type in `npm install` and wait for it to finish.
-Once npm install has finished, type `node index.js` in the command line to run the program.\
+First step, install the latest Node.js from the official website https://nodejs.org/en/download/\
+Then, go to the `OSC program` folder and open a command line there. Type in `npm install` and wait for it to finish.\
+Once npm install has finished, type `node index.js` in the command line to run the program.
 
 Note: You will need to run the program every time you run VRChat or you will need to run it on a server. I run mine on a server I have at home and I use the argument `--osc=9000:192.168.1.22:9001` in order to tell VRChat to send OSC data to my server
 
