@@ -25,6 +25,11 @@ class WatchOSC {
 	#sendData = true;
 
 	// Time
+	// VRChat uses 8 bits tinyfloat (also called minifloat).
+	// They go from -1 to 1. The first bit is used for the sign (- or +) and the 7 remaining bits are used for the decimals.
+	// This leads to 256 total values and 127 values from 0 to 1. Each values increment is 0.0078125, hence the below multiplier.
+	// For example, if I send MULTIPLIER * 14, the shader will receive very precisely 0.109375. It can then divide that number by
+	// 0.0078125 to obtain 14 back.
 	static #MULTIPLIER = 0.0078125;
 	#lastHours;
 	#lastMinutes;
